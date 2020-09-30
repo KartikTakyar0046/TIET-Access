@@ -1,19 +1,19 @@
   {% extends "base.html" %}
   {% block content %}
   <span class="border border-primary"></span>
- <center> <h2>Hello {{user.username}}
+ <center> <h2 style= "font-family: Courier New, Courier, monospace;color: #f34605 "; >Hello {{user.username}}
  	<br>
  Welcome to your Dashboard</h2>
  	<br><br><br><br>
 
  	<div class="list-group">
-  <a href="http://127.0.0.1:8000/user/dashboard/assignments" class="list-group-item list-group-item-action">Your Assignments for Batch COE-{{user.profile.batch}}</a>
-  <a href="http://127.0.0.1:8000/user/dashboard/mybatch" class="list-group-item list-group-item-action">Your Batch Students</a>
+  <a href="http://127.0.0.1:8000/user/dashboard/assignments" class="list-group-item list-group-item-action"><h3 style= "font-family: Courier New, Courier, monospace;color: #05c1f3";>Your Assignments for Batch COE-{{user.profile.batch}}</h3></a>
+  <a href="http://127.0.0.1:8000/user/dashboard/mybatch" class="list-group-item list-group-item-action"><h3 style= "font-family: Courier New, Courier, monospace;color: #05c1f3";>  Your Batch Students</h3></a>
  
 </div>
 
 
 </center>
 
-
+</body>
     {% endblock %}
