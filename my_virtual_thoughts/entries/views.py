@@ -4,6 +4,7 @@ from .models import Assignment
 # # Create your views here.
 from django.views.generic import ListView,DetailView ,CreateView
 from .forms import AssignmentForm
+from django.urls import reverse
 
 class Homepage(ListView):
 	model=Assignment
@@ -16,11 +17,20 @@ class EntryView(DetailView):
 	model=Assignment
 	template_name='detailed.html'
 
-def CreatePost(request):
-	form=AssignmentForm(request.POST or None)
-	if form.is_valid():
-		form.save()
-	context={}
-	context['form']=form
-	return render(request, 'create_post.html',context)
 
+def CreatePost(request):
+	form=AssignmentForm(request.POST)
+	if not request.user.is_authenticated:
+		return render(request, 'index.html')
+	else:
+		if request.method=='POST':
+			if form.is_valid():
+				ass=form.save(commit=False)
+				ass.user_id=request.user.id
+				ass.save()
+				new_data = Assignment.objects.last()
+			context={'ass':form}
+			return render(request, 'index.html',context)
+		else:
+			form=AssignmentForm(request.POST)
+		return render(request, 'create_post.html', {'form':form})

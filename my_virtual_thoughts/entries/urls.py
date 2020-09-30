@@ -17,9 +17,10 @@ Including another URLconf
 
 '''
 from django.urls import path
-from .views import Homepage,EntryView,CreatePost
+from django.conf.urls import url
+from .views import Homepage,CreatePost,EntryView
 urlpatterns = [
 	path('', Homepage.as_view(),name="home-page"),
-	path('assignment/<int:pk>/' , EntryView.as_view(), name="assignment-detail"),
-	path('create_assignment/',CreatePost,name='create-assignment')
+	path('assignment_detail' , EntryView.as_view(), name="assignment-detail"),
+	path('create_assignment/',CreatePost,name='create-assignment'),
 ]

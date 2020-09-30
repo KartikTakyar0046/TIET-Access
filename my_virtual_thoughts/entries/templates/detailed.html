@@ -1,21 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+hello
+{{for object in assignment_entries}}
 <div class="row">
     <div class="col s12 m6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">{{object.entry_title}}</span>
-          <p>{{object.entry_text}}</p>
+          <span class="card-title">{{object.Assignment_Name}}</span>
+          <p>{{object.Assignment_Content}}</p>
         </div>
         <div class="card-action">
           <p>
           <break>
           </break>
       </p>
-          <p>Writer: <a href="#">{{object.entry_author}}</a></p>
-         <p> {{object.entry_date}}</p>
+          <p>Writer: <a href="#">{{object.Publishing_Teacher}}</a></p>
+         <p> {{object.Date_Published}}</p>
         </div>
       </div>
     </div>
   </div>
+  Hello
   {% endblock %}

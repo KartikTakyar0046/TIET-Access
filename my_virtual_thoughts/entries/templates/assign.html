@@ -1,0 +1,13 @@
+ {% include "teacher_dashboard.html"%}
+  {% block content %}
+  <center><h2>Here are the Assignments</h2></center>
+    {% for ass in assignments %}
+
+<div class="jumbotron">
+  <h1 class="display-4">{{ass.Assignment_Name}}</h1>
+  <p class="lead">Date Published:- {{ass.Date_Published}}</p>
+  <hr class="my-4">
+  <p>{{ass.Assignment_Content}}</p>
+</div>
+  {% endfor%}
+  {% endblock%}

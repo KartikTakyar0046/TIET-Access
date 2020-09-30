@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Batch, Assignment
-
-admin.site.register(Batch)	 
+from .models import Assignment
+	 
 admin.site.register(Assignment)	 

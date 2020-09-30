@@ -1,0 +1,19 @@
+  {% extends "base.html" %}
+  {% block content %}
+  <span class="border border-primary"></span>
+ <center> <h2>Hello {{user.username}}
+ 	<br>
+ Welcome to your Dashboard</h2>
+ 	<br><br><br><br>
+
+ 	<div class="list-group">
+  <a href="http://127.0.0.1:8000/user/dashboard/assignments" class="list-group-item list-group-item-action">Your Assignments for Batch COE-{{user.profile.batch}}</a>
+  <a href="http://127.0.0.1:8000/user/dashboard/mybatch" class="list-group-item list-group-item-action">Your Batch Students</a>
+ 
+</div>
+
+
+</center>
+
+
+    {% endblock %}
