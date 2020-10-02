@@ -17,7 +17,7 @@ Including another URLconf
 from . import views
 
 from django.contrib.auth import views as auth_views
-from .views import dashboard,assign,mybatch
+from .views import dashboard,assign,mybatch,stu_dashboard,assign_stu
 
 from django.urls import path
 urlpatterns = [
@@ -27,5 +27,7 @@ urlpatterns = [
     path('dashboard/',dashboard, name='dashboard'),
     path('dashboard/assignments/',assign,name='assign'),
     path('dashboard/mybatch/',mybatch, name='mybatch'),
+    path('stu_dashboard/',stu_dashboard, name='stu_dashboard'),
+    path('stu_dashboard/assignments',assign_stu,name='assign_stu'),
  
 ]

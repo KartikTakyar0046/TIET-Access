@@ -1,11 +1,12 @@
  {% include "teacher_dashboard.html"%}
   {% block content %}
-  <h2>Here is the List of Students in your batch:</h2>
+  <h2 style="font-family:  Comic Sans MS, cursive, sans-serif";>Here is the List of Students in your batch:</h2>
     {% for stu in users%}
   {% if stu.batch == user.profile.batch and stu.role == 1 %}
    <ul class="list-group">
   
-  <li class="list-group-item">{{forloop.counter0}}) {{stu}}</li>
+  <li class="list-group-item" style="font-family:Comic Sans MS, cursive, sans-serif";>{{forloop.counter0}}) {{stu}}</li>
+
 </ul>
   {% endif %}
   {% endfor%}

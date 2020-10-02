@@ -8,10 +8,16 @@ from django.urls import reverse
 
 class Homepage(ListView):
 	model=Assignment
-	template_name='index.html'
+	template_name='assign_stu.html'
 	context_object_name="assignment_entries"
 	ordering=['-Date_Published']
 	paginate_by=3
+
+
+# def stu_ass(request):
+# 	assignment_entries=Assignment.objects.all()
+# 	context={'assignment_entries':assignment_entries}
+# 	return render(request, 'assign_stu.html', context=context)
 
 class EntryView(DetailView):
 	model=Assignment

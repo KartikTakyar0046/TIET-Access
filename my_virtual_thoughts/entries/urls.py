@@ -23,4 +23,5 @@ urlpatterns = [
 	path('', Homepage.as_view(),name="home-page"),
 	path('assignment_detail' , EntryView.as_view(), name="assignment-detail"),
 	path('create_assignment/',CreatePost,name='create-assignment'),
+   # path('/user/stu_dashboard/assignments', stu_ass,name="stu_ass"),
 ]
