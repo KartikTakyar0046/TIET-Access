@@ -1,0 +1,164 @@
+ {% include 'student_dashboard.html' %}
+{% block content%}
+{% load static %}
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+  </style>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css'%}">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+  </style>
+  </head>
+
+  <body>
+    <div class="tableContainer">
+      <table class="table">
+        <tr>
+          <th>TIME</th>
+          <th>MONDAY</th>
+          <th>TUESDAY</th>
+          <th>WEDNESDAY</th>
+          <th>THURSDAY</th>
+          <th>FRIDAY</th>
+          <th>SATURDAY</th>
+        </tr>
+        <tr>
+          <td>08:00 AM</td>
+          <td><button class="lectureButton" onclick="#">UCS001 (ItCS)</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="tutorialButton" onclick="#">UCS701 (ToC)</button></td>
+          <td><button class="lectureButton" onclick="#">UCS507 (CAO)</button></td>
+          <td><button class="lectureButton" onclick="#">UCS507 (CAO)</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>08:50 AM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="labButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="labButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="labButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="labButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="labButton" onclick="#">LECTURE NAME</button></td>
+        </tr>
+        <tr>
+          <td>09:40 AM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="tutorialButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="tutorialButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="tutorialButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="tutorialButton" onclick="#">LECTURE NAME</button></td>
+          <td><button class="tutorialButton" onclick="#">LECTURE NAME</button></td>
+        </tr>
+        <tr>
+          <td>10:30 AM</td>
+          <td><button class="tutorialButton" onclick="#">UCS701 (ToC)</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>11:20 AM</td>
+          <td><button class="lectureButton" onclick="#">UCS415 (DAA)</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>12:10 PM</td>
+          <td><button class="lectureButton" onclick="#">UCS503 (SE)</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>01:00 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>01:50 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>02:40 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>03:30 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>04:20 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>05:10 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+        <tr>
+          <td>06:00 PM</td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+          <td><button class="breakButton" onclick="#">BREAK</button></td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+  {% endblock %}
+</html>

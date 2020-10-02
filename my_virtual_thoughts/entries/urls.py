@@ -20,7 +20,7 @@ from django.urls import path
 from django.conf.urls import url
 from .views import Homepage,CreatePost,EntryView
 urlpatterns = [
-	path('', Homepage.as_view(),name="home-page"),
+	path('', Homepage,name="Homepage"),
 	path('assignment_detail' , EntryView.as_view(), name="assignment-detail"),
 	path('create_assignment/',CreatePost,name='create-assignment'),
    # path('/user/stu_dashboard/assignments', stu_ass,name="stu_ass"),

@@ -6,13 +6,11 @@ from django.views.generic import ListView,DetailView ,CreateView
 from .forms import AssignmentForm
 from django.urls import reverse
 
-class Homepage(ListView):
-	model=Assignment
-	template_name='assign_stu.html'
-	context_object_name="assignment_entries"
-	ordering=['-Date_Published']
-	paginate_by=3
+def Homepage(request):
+	return render(request, 'index.html')
 
+def tt(request):
+	return render(request, 'timetable.html')
 
 # def stu_ass(request):
 # 	assignment_entries=Assignment.objects.all()

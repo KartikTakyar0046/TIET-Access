@@ -18,7 +18,7 @@ from . import views
 
 from django.contrib.auth import views as auth_views
 from .views import dashboard,assign,mybatch,stu_dashboard,assign_stu
-
+from entries.views import tt
 from django.urls import path
 urlpatterns = [
     # path('register/',views.register, name="register"),
@@ -29,5 +29,6 @@ urlpatterns = [
     path('dashboard/mybatch/',mybatch, name='mybatch'),
     path('stu_dashboard/',stu_dashboard, name='stu_dashboard'),
     path('stu_dashboard/assignments',assign_stu,name='assign_stu'),
+    path('stu_dashboard/timetable',tt,name='timetable'),
  
 ]
